@@ -11,9 +11,7 @@
 	<body ng-app="myToDoMvc">
 		<!-- <div ng-view></div> -->
 		<ng-view></ng-view>
-		<script id="main_template" type="text/ng-template">
-			 <!--采用路由方式的话就不需要在 页面绑定控制器 ng-controller="MainController" -->
-			<section class="todoapp">
+			<section class="todoapp" ng-controller="MainController">
 				<header class="header">
 					<h1>todos</h1>
 					<form ng-submit="add()">
@@ -66,7 +64,7 @@
 					<button class="clear-completed" ng-click="clear()" ng-show="existCompleted()">Clear completed</button>
 				</footer>
 			</section>
-		</script>
+		
 		<footer class="info">
 			<p>Double-click to edit a todo</p>
 			<!-- Remove the below line ↓ -->
